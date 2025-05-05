@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Голосование</title>
+</head>
+<body>
+    <h2>{{ poll[0] }}</h2>
+    <form method="POST" action="{{ url_for('vote', poll_id=poll_id) }}">
+        {% for option in options %}
+        <input type="radio" name="option" value="{{ option[0] }}" required>
+        <label>{{ option[1] }}</label><br>
+        {% endfor %}
+        <button type="submit">Голосовать</button>
+    </form>
+</body>
+</html>

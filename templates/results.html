@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результаты</title>
+</head>
+<body>
+    <h2>{{ poll[0] }}</h2>
+    {% for option in options %}
+    <div>
+        {{ option[0] }}: {{ option[1] }} голосов
+    </div>
+    {% endfor %}
+    <a href="{{ url_for('index') }}">На главную</a>
+</body>
+</html>
